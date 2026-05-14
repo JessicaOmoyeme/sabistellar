@@ -1,0 +1,18 @@
+[package]
+name = "sabi-exchange"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+mock_usdc = { path = "../mock_usdc" }
+sabi-ctf = { path = "../sabi_ctf" }
+sabi-market = { path = "../sabi_market" }

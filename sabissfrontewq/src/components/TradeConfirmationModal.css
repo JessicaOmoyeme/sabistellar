@@ -1,0 +1,251 @@
+.pm-trade-confirmation__overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  animation: pm-fade-in 200ms ease-out;
+}
+
+.pm-trade-confirmation__modal {
+  position: relative;
+  max-width: 420px;
+  width: 90%;
+  background: var(--pm-background);
+  border-radius: 12px;
+  box-shadow: var(--pm-shadow-modal);
+  animation: pm-slide-up 300ms ease-out cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.pm-trade-confirmation__content {
+  padding: 40px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.pm-trade-confirmation__icon-wrapper {
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: 8px;
+}
+
+.pm-trade-confirmation__icon-wrapper svg {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+.pm-trade-confirmation__icon-wrapper--loading svg {
+  color: var(--pm-blue);
+  animation: pm-spin 1s linear infinite;
+}
+
+.pm-trade-confirmation__icon-wrapper--success svg {
+  color: #10b981;
+  animation: pm-scale-in 400ms ease-out cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pm-trade-confirmation__icon-wrapper--error svg {
+  color: #ef4444;
+  animation: pm-scale-in 300ms ease-out cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.pm-trade-confirmation__title {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0;
+  color: var(--pm-text);
+}
+
+.pm-trade-confirmation__subtitle {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--pm-text-secondary);
+}
+
+.pm-trade-confirmation__error-message {
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 0;
+  color: #ef4444;
+  font-weight: 500;
+}
+
+.pm-trade-confirmation__details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--pm-surface);
+  border-radius: 8px;
+  margin: 8px 0;
+  text-align: left;
+}
+
+.pm-trade-confirmation__detail-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.pm-trade-confirmation__detail-row--stacked {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.pm-trade-confirmation__detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--pm-text-tertiary);
+  letter-spacing: 0.5px;
+}
+
+.pm-trade-confirmation__detail-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--pm-text);
+}
+
+.pm-trade-confirmation__tx-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.pm-trade-confirmation__tx-hash {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: var(--pm-background);
+  border: 1px solid var(--pm-border-strong);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+  font-size: 12px;
+  font-family: "Monaco", "Menlo", "Courier New", monospace;
+  color: var(--pm-blue);
+  text-align: left;
+  position: relative;
+}
+
+.pm-trade-confirmation__tx-hash:hover {
+  background: var(--pm-surface);
+  border-color: var(--pm-blue);
+}
+
+.pm-trade-confirmation__tx-hash code {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+.pm-trade-confirmation__tx-copy-feedback {
+  font-size: 10px;
+  color: #10b981;
+  font-weight: 600;
+  margin-left: auto;
+  white-space: nowrap;
+  animation: pm-fade-in 100ms ease-out;
+}
+
+.pm-trade-confirmation__success-note {
+  font-size: 12px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--pm-text-secondary);
+}
+
+.pm-trade-confirmation__close-button {
+  padding: 10px 16px;
+  background: var(--pm-blue);
+  color: white;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 150ms ease-out;
+  margin-top: 8px;
+}
+
+.pm-trade-confirmation__close-button:hover {
+  background: var(--pm-blue-hover);
+  transform: translateY(-1px);
+}
+
+.pm-trade-confirmation__close-button:active {
+  transform: translateY(0);
+}
+
+@keyframes pm-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pm-slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pm-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pm-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px) {
+  .pm-trade-confirmation__modal {
+    width: 95%;
+    max-width: 100%;
+  }
+
+  .pm-trade-confirmation__content {
+    padding: 32px 20px;
+    gap: 14px;
+  }
+
+  .pm-trade-confirmation__details {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .pm-trade-confirmation__title {
+    font-size: 16px;
+  }
+}

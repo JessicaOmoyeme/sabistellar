@@ -1,0 +1,21 @@
+<svg width="320" height="320" viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g stroke="black" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Hexagon outline -->
+    <path d="M160 40L250 95V225L160 280L70 225V95L160 40Z" />
+
+    <!-- Vertical center -->
+    <path d="M160 40V280" />
+
+    <!-- Upper left to center -->
+    <path d="M70 95L160 160" />
+
+    <!-- Upper right to center -->
+    <path d="M250 95L160 160" />
+
+    <!-- Lower left to center -->
+    <path d="M70 225L160 160" />
+
+    <!-- Lower right to center -->
+    <path d="M250 225L160 160" />
+  </g>
+</svg>

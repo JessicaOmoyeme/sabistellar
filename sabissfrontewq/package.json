@@ -1,0 +1,27 @@
+{
+  "name": "example-basic",
+  "type": "module",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "test": "node --loader ./test/alias-loader.mjs --experimental-strip-types --test src/lib/auth.test.ts src/lib/comment.test.ts src/lib/config.test.ts src/lib/faucet.test.ts src/lib/market.test.ts src/lib/order.test.ts src/components/market-detail/format.test.ts src/components/market-detail/data.test.ts",
+    "start": "vite start",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@creit.tech/stellar-wallets-kit": "^2.1.0",
+    "@solidjs/meta": "^0.29.4",
+    "@solidjs/router": "^0.15.0",
+    "@solidjs/start": "2.0.0-alpha.2",
+    "@solidjs/vite-plugin-nitro-2": "^0.1.0",
+    "@visx/curve": "^3.12.0",
+    "@visx/scale": "^3.12.0",
+    "@visx/shape": "^3.12.0",
+    "solid-js": "^1.9.5",
+    "stellar-sdk": "^13.3.0",
+    "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

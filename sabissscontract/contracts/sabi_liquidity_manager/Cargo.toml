@@ -1,0 +1,19 @@
+[package]
+name = "sabi-liquidity-manager"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+sabi-exchange = { path = "../sabi_exchange" }
+sabi-market = { path = "../sabi_market" }
+sabi-ctf = { path = "../sabi_ctf" }
+mock_usdc = { path = "../mock_usdc" }

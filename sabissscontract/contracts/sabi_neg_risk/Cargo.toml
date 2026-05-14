@@ -1,0 +1,17 @@
+[package]
+name = "sabi-neg-risk"
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[lib]
+crate-type = ["cdylib"]
+doctest = false
+
+[dependencies]
+soroban-sdk = { workspace = true }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }
+sabi-market = { path = "../sabi_market" }
+sabi-ctf = { path = "../sabi_ctf" }

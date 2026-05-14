@@ -1,0 +1,43 @@
+<svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Rounded container -->
+  <rect x="4" y="4" width="88" height="88" rx="20" fill="#F7F7F8" stroke="#E6E6E8"/>
+
+  <!-- Gradient -->
+  <defs>
+    <linearGradient id="magicGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6C63FF"/>
+      <stop offset="100%" stop-color="#5B5CE6"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Center shape -->
+  <path
+    d="M48 24 
+       L56 36 
+       L52 72 
+       L44 72 
+       L40 36 
+       Z"
+    fill="url(#magicGradient)"
+  />
+
+  <!-- Left shape -->
+  <path
+    d="M30 36 
+       Q28 48 30 60 
+       L36 66 
+       Q34 48 36 30 
+       Z"
+    fill="url(#magicGradient)"
+  />
+
+  <!-- Right shape -->
+  <path
+    d="M66 36 
+       Q68 48 66 60 
+       L60 66 
+       Q62 48 60 30 
+       Z"
+    fill="url(#magicGradient)"
+  />
+</svg>
